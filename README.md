@@ -10,5 +10,4 @@ ________Escrito_por_Juampa_Rodríguez________"
 Script en bash para la obtención de ficheros de ofimática (doc, docx, pdf, xls, xlsx) desde los motores de búsqueda Google y Bing para el tratamiento y la lectura de sus metadatos.
 
 # Demo
-[![demo](https://asciinema.org/a/350744.png)](https://asciinema.org/a/350744?autoplay=1)
-[![asciicast](https://asciinema.org/a/350744.svg)](https://asciinema.org/a/350744)
+[![demo](https://asciinema.org/a/350744.svg)](https://asciinema.org/a/350744?autoplay=1)
