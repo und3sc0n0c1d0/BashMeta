@@ -11,3 +11,6 @@ Script en bash para la obtención de ficheros de ofimática (doc, docx, pdf, xls
 
 # Demo
 [![demo](https://asciinema.org/a/350744.svg)](https://asciinema.org/a/350744?autoplay=1)
+
+# Crédito
+Script inspirado en el proyecto https://github.com/dafthack/PowerMeta de Beau Bullock (@dafthack)
