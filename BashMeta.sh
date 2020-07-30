@@ -8,8 +8,8 @@ echo "|____/ \__,_|___/_| |_|_|  |_|\___|\__\__,_|.v1.0"
 echo "________Escrito_por_Juampa_Rodríguez________"
 echo -e "\n[i] Iniciando la búsqueda de ficheros en Bing y Google..."
 for ext in $(echo doc docx pdf xls xlsx);
-do curl -s "http://www.bing.com/search?q=site:$1%20filetype:$ext&count=1" -A "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" | sed 's/<a href="/\nURL#/g' | sed 's/" h="ID=/\n/g' | grep -v "live.com/" | grep 'URL#' | cut -d "#" -f2 >> URLs_Bing.tmp;
-curl -s "https://www.google.com/search?q=site:$1+filetype:$ext&num=1" -A "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" | sed 's/><a href="h/\nURL#h/g' | sed 's/" onmousedown="/\n/g' | grep -v google.com | grep $1 | sed 's/" data/\n/g' | grep http | grep "URL#" | cut -d "#" -f2 >> URLs_Google.tmp;
+do curl -s "http://www.bing.com/search?q=site:$1%20filetype:$ext&count=100" -A "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" | sed 's/<a href="/\nURL#/g' | sed 's/" h="ID=/\n/g' | grep -v "live.com/" | grep 'URL#' | cut -d "#" -f2 >> URLs_Bing.tmp;
+curl -s "https://www.google.com/search?q=site:$1+filetype:$ext&num=100" -A "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" | sed 's/><a href="h/\nURL#h/g' | sed 's/" onmousedown="/\n/g' | grep -v google.com | grep $1 | sed 's/" data/\n/g' | grep http | grep "URL#" | cut -d "#" -f2 >> URLs_Google.tmp;
 done;
 TotalURLsBing=$(cat URLs_Bing.tmp | wc -l);
 echo -e "[i] Se identificaron" $TotalURLsBing "ficheros en Bing...";
